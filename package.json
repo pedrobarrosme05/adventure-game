@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An adventure game project featuring room exploration and player interactions.",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "start": "node src/index.js"
   },

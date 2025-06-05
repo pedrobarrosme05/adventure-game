@@ -1,3 +1,5 @@
+import inquirer from 'inquirer';
+
 class JogoDemo {
     constructor() {
         this.rooms = this.createRooms();
@@ -50,15 +52,33 @@ class JogoDemo {
         return [room1, room2, room3, room4];
     }
 
-    joga() {
+    async joga() {
         console.log(`Welcome to the Adventure Game!`);
-        this.describeCurrentRoom();
-        // Additional game loop logic would go here
+        while (true) {
+            this.describeCurrentRoom();
+            const choices = Object.keys(this.currentRoom.connections);
+            const answer = await inquirer.prompt([
+                {
+                    type: 'list',
+                    name: 'direction',
+                    message: 'Which direction do you want to go?',
+                    choices: [...choices, 'Exit Game']
+                }
+            ]);
+
+            if (answer.direction === 'Exit Game') {
+                console.log('Thanks for playing!');
+                break;
+            }
+
+            const nextRoomIndex = this.currentRoom.connections[answer.direction];
+            this.currentRoom = this.rooms[nextRoomIndex];
+        }
     }
 
     describeCurrentRoom() {
         const room = this.currentRoom;
-        console.log(`${room.name}: ${room.description}`);
+        console.log(`\n${room.name}: ${room.description}`);
     }
 }
 
