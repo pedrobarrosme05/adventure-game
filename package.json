@@ -1,0 +1,17 @@
+{
+  "name": "adventure-game",
+  "version": "1.0.0",
+  "description": "An adventure game project featuring room exploration and player interactions.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    // Add any dependencies here as needed
+  },
+  "devDependencies": {
+    // Add any development dependencies here as needed
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
