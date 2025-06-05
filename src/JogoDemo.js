@@ -1,7 +1,7 @@
 class JogoDemo {
     constructor() {
         this.rooms = this.createRooms();
-        this.currentRoom = this.rooms[0]; // Start in the first room
+        this.currentRoom = this.rooms[0]; 
     }
 
     createRooms() {
@@ -11,8 +11,8 @@ class JogoDemo {
             objects: [],
             tools: [],
             connections: {
-                north: 1, // Room 2
-                east: 2   // Room 3
+                north: 1, 
+                east: 2 
             }
         };
 
@@ -22,7 +22,7 @@ class JogoDemo {
             objects: [],
             tools: [],
             connections: {
-                south: 0  // Room 1
+                south: 0  
             }
         };
 
@@ -32,7 +32,7 @@ class JogoDemo {
             objects: [],
             tools: [],
             connections: {
-                west: 0   // Room 1
+                west: 0   
             }
         };
 
