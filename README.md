@@ -1,53 +1,53 @@
 # Adventure Game
 
 ## Overview
-This project is an "Adventure" game that allows players to explore various rooms, interact with objects, and solve puzzles. The game is structured using classes to represent the game components, including rooms, players, and the overall game state.
+Este projeto visa criar um jogo da categoria puzzle, baseado na descrição da tarefa da disciplina de Programação Orientada a Objetos. Jogo genérico de aventura onde se interage com salas e seus respectivos cenarios.
 
-## Project Structure
+## Estrutura do projeto
 ```
 adventure-game
 ├── src
-│   ├── index.js          # Entry point of the application
-│   ├── JogoDemo.js       # Game scenario and room management
+│   ├── index.js         
+│   ├── JogoDemo.js       
 │   ├── models
-│   │   ├── Room.js       # Represents a room in the game
-│   │   ├── Player.js     # Represents the player character
-│   │   └── Game.js       # Manages the overall game state
+│   │   ├── Room.js       
+│   │   ├── Player.js     
+│   │   └── Game.js      
 │   └── data
-│       └── rooms.js      # Definitions of the rooms in the game
-├── package.json          # Configuration file for npm
-└── README.md             # Documentation for the project
+│       └── rooms.js     
+├── package.json          
+└── README.md            
 ```
 
-## Setup Instructions
-1. **Clone the repository**:
+## Instruções iniciais
+1. **Clonar o repo**:
    ```bash
    git clone <repository-url>
    cd adventure-game
    ```
 
-2. **Install dependencies**:
-   Make sure you have Node.js installed. Then run:
+2. **Instalando dependencias**:
+   Verifique a instalação do Node.js
    ```bash
    npm install
    ```
 
-## Running the Game
-To start the game, run the following command in your terminal:
+## Rodando o jogo
+Para começar o jogo, rode o seguinde comando no seu terminal:
 ```bash
 node src/index.js
 ```
 
-## Gameplay
-- Navigate through different rooms by interacting with doors.
-- Collect tools and objects to solve puzzles.
-- Use commands to interact with the environment.
+## Como jogar
+- Navegue por diferentes salas interagindo com as portas.
+- CColete ferramentas e objetos para resolver enigmas.
+- Use comandos para interagir com o ambiente.
 
-## Classes Overview
-- **JogoDemo**: Manages the game scenario and room transitions.
-- **Room**: Represents each room with its properties and methods for interaction.
-- **Player**: Manages the player's inventory and actions.
-- **Game**: Controls the game state and user input.
+## 
+- **JogoDemo**:  Gerencia o cenário do jogo e as transições entre salas.
+- **Room**: Representa cada sala com suas propriedades e métodos de interação.
+- **Player**: Gerencia o inventário e as ações do jogador.
+- **Game**: Controla o estado do jogo e as entradas do usuário.
 
 ## Contribution
 Feel free to fork the repository and submit pull requests for any improvements or features you would like to add. 
