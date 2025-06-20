@@ -1,26 +1,15 @@
 class Player {
-    constructor(name) {
+    constructor(name, startingRoom, objective) {
         this.name = name;
+        this.startingRoom = startingRoom;
         this.inventory = [];
+        this.objective = objective;
+        this.hasWon = false;
     }
 
-    pickUp(item) {
-        this.inventory.push(item);
-        console.log(`${item} has been added to your inventory.`);
-    }
-
-    use(item, target) {
-        if (this.inventory.includes(item)) {
-            console.log(`You used ${item} on ${target}.`);
-            // Implement specific interactions based on item and target
-        } else {
-            console.log(`You don't have ${item} in your inventory.`);
-        }
-    }
-
-    getInventory() {
-        return this.inventory;
+    hasGoldenKey() {
+        return this.inventory.some(item => item.name === "Golden Key");
     }
 }
 
-export { Player };
+export default Player;
